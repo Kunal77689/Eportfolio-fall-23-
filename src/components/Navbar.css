@@ -1,0 +1,78 @@
+/* .container */
+html{
+    background-color: black;
+}
+
+.container {
+    position: absolute;
+    top: 0; /* Place the container at the top of the viewport */
+    width: 100%; /* Make the container span the full width */
+}
+
+/* .navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between brand and links */
+    align-items: center;
+}
+
+/* .navbar-brand */
+.navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-underline-offset: 0;
+    position: absolute;
+    left: 1.2rem;
+    top: 10px;
+}
+
+/* .nav-links-container */
+.nav-links-container {
+    position: absolute;
+    right: 1.2rem;
+    top: 10px;
+    display: flex;
+    gap: 100px; /* Adjust the space between brand and links */
+}
+
+/* .navbar-links */
+.navlink1 {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    position: absolute;
+    right: 11.0rem;
+}
+
+.navlink2 {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    position: absolute;
+    right: 6.0rem;
+}
+
+.navlink3 {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    position: absolute;
+    right: 0.0rem;
+}
+
+.navlink1:hover{
+    font-weight: bold;
+    text-decoration: none;
+    color: #fffff0;
+}
+.navlink2:hover{
+    font-weight: bold;
+    text-decoration: none;
+    color: #fffff0;
+}
+.navlink3:hover{
+    font-weight: bold;
+    text-decoration: none;
+    color: #fffff0;
+}
