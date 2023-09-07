@@ -1,0 +1,13 @@
+.vertical-line {
+    width: 5px;
+    height: 800px;
+    background-color: white;
+    margin: 0 auto; /* Center horizontally */
+    position: absolute;
+    top: 1500px; /* Center vertically */
+    left: 750px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    opacity: 1;
+  }
+  

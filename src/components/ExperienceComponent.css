@@ -1,0 +1,192 @@
+.experience-container {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  position: absolute;
+  top: 1100px;
+  left: 300px;
+  color: white;
+  z-index: 1; /* Ensure it stays on top */
+  overflow: hidden;
+}
+
+.experience-container.visible {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1; /* Ensure it stays on top */
+  overflow: visible;
+}
+
+.experience-content {
+  display: flex; /* Use flexbox to position image and text */
+  align-items: center; /* Center vertically */
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  left: 0; /* Adjust the left position */
+  top: 60px;
+}
+
+.experience-image {
+  width: 65px;
+  position: absolute;
+  left:50px;
+  top: 50px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: opacity 0.6s ease;
+  margin-right: 20px; /* Add margin to separate image and text */
+}
+
+.experience-image.visible {
+  opacity: 1;
+}
+
+.experience-paragraph {
+  width: 500px;
+  color: rgb(240, 239, 239);
+  font-size: 10.5px;
+  font-weight: bold;
+  transition: opacity 0.6s ease;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow */
+  position: absolute;
+  left: -10px;
+  top: 150px;
+  text-overflow: ellipsis; /* Show ellipsis for long text */
+}
+
+.experience-paragraph.visible {
+  opacity: 1;
+}
+.experience-container2 {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  position: absolute;
+  top: 1350px;
+  left: 750px;
+  color: white;
+  z-index: 1; /* Ensure it stays on top */
+  overflow: hidden;
+}
+
+.experience-container2.visible {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1; /* Ensure it stays on top */
+  overflow: visible;
+}
+
+.experience-content2 {
+  display: flex; /* Use flexbox to position image and text */
+  align-items: center; /* Center vertically */
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  left: 0; /* Adjust the left position */
+  top: 60px;
+}
+
+.experience-image2 {
+  width: 65px;
+  position: absolute;
+  left:50px;
+  top: 50px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: opacity 0.6s ease;
+  margin-right: 20px; /* Add margin to separate image and text */
+}
+
+.experience-image2.visible {
+  opacity: 1;
+}
+
+.experience-paragraph2 {
+  width: 500px;
+  color: rgb(240, 239, 239);
+  font-size: 10.5px;
+  font-weight: bold;
+  transition: opacity 0.6s ease;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow */
+  position: absolute;
+  left: -10px;
+  top: 150px;
+  text-overflow: ellipsis; /* Show ellipsis for long text */
+}
+
+.experience-paragraph2.visible {
+  opacity: 1;
+}
+.experience-container3 {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  position: absolute;
+  top: 1600px;
+  left: 300px;
+  color: white;
+  z-index: 1; /* Ensure it stays on top */
+  overflow: hidden;
+}
+
+.experience-container3.visible {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1; /* Ensure it stays on top */
+  overflow: visible;
+}
+
+.experience-content3 {
+  display: flex; /* Use flexbox to position image and text */
+  align-items: center; /* Center vertically */
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  left: 0; /* Adjust the left position */
+  top: 60px;
+}
+
+.experience-image3 {
+  width: 65px;
+  position: absolute;
+  left:50px;
+  top: 50px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: opacity 0.6s ease;
+  margin-right: 20px; /* Add margin to separate image and text */
+}
+
+.experience-image3.visible {
+  opacity: 1;
+}
+
+.experience-paragraph3 {
+  width: 500px;
+  color: rgb(240, 239, 239);
+  font-size: 10.5px;
+  font-weight: bold;
+  transition: opacity 0.6s ease;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow */
+  position: absolute;
+  left: -10px;
+  top: 150px;
+  text-overflow: ellipsis; /* Show ellipsis for long text */
+}
+
+.experience-paragraph3.visible {
+  opacity: 1;
+}

@@ -1,12 +1,13 @@
 /* .container */
-html{
-    background-color: black;
-}
-
 .container {
     position: absolute;
     top: 0; /* Place the container at the top of the viewport */
     width: 100%; /* Make the container span the full width */
+}
+html{
+    background-color: #000114;
+    
+
 }
 
 /* .navbar */
@@ -14,12 +15,13 @@ html{
     display: flex;
     justify-content: space-between; /* Space between brand and links */
     align-items: center;
+    height: 80px;
 }
 
 /* .navbar-brand */
 .navbar-brand {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-decoration: none;
     text-underline-offset: 0;
     position: absolute;
@@ -39,26 +41,29 @@ html{
 /* .navbar-links */
 .navlink1 {
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-decoration: none;
     position: absolute;
-    right: 11.0rem;
+    right: 14.0rem;
+    top: 10px;
 }
 
 .navlink2 {
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-decoration: none;
     position: absolute;
-    right: 6.0rem;
+    right: 8rem;
+    top: 10px;
 }
 
 .navlink3 {
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-decoration: none;
     position: absolute;
     right: 0.0rem;
+    top: 10px;
 }
 
 .navlink1:hover{

@@ -1,0 +1,43 @@
+/* ParallaxComponent.css */
+
+.parallax-container1 {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000114;
+    position: absolute;
+    top: 2000px;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    overflow: hidden;
+  }
+  
+  .parallax-container1.visible {
+    opacity: 1;
+  }
+  
+  .parallax-content1 {
+    text-align: center;
+    width: 1000px;
+    padding: 20px;
+  }
+  
+  .parallax-heading1 {
+    font-size: 24px;
+    color: #FAF3FE;
+    margin: 10px 0;
+    position: absolute;
+    left: 1000px;
+    top: 100px;
+    transition: transform 0.6s ease, font-size 0.6s ease, opacity 0.6s ease;
+  }
+  
+  .parallax-content1 p {
+    position: absolute;
+    left: 600px;
+    top: 190px;
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+  }
+  
