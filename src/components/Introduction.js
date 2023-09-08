@@ -6,8 +6,7 @@ const Introduction = () => {
     'Backend developer',
     'Software Developer',
     'Frontend developer',
-    'Full stack developer',
-    'Java Developer',
+    'Full-Stack developer',
   ];
 
   const [roleIndex, setRoleIndex] = useState(0);

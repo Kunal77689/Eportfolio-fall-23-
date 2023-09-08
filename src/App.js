@@ -6,6 +6,8 @@ import ParallaxComponent from "./components/ParallaxComponent";
 import ExperienceComponent from "./components/ExperienceComponenet";
 import VerticalLine from "./components/VerticalLine";
 import ParallaxComponentProjects from "./components/ParallaxComponentProjects";
+import ImageComponent from "./components/ImageComponent";
+
 function App() {
   return (
     <div className="App">
@@ -16,6 +18,7 @@ function App() {
       <VerticalLine/>
       <ExperienceComponent/>
       <ParallaxComponentProjects/>
+      <ImageComponent/>
     </div>
   );
 }

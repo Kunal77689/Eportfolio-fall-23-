@@ -35,8 +35,8 @@ const ExperienceComponent = () => {
 
       // Adjust these trigger points
       const triggerPoint1 = 500;
-      const triggerPoint2 = 1450;
-      const reductionSpeed = 0.001; // Adjust the speed of reduction
+      const triggerPoint2 = 1250;
+      const reductionSpeed = 0.0005; // Adjust the speed of reduction
 
       if (scrollPosition > triggerPoint2) {
         // Gradually reduce size and opacity

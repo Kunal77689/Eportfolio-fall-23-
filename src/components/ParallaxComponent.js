@@ -32,7 +32,7 @@ const ParallaxComponent = () => {
     <div className="parallax-container" ref={containerRef}>
       <div className="parallax-content">
         <h2 className="parallax-heading" style={headingStyle}>
-          SKILLS AND EXPERIENCE
+          PREVIOUS EXPERIENCE
         </h2>
         <p>
           "Experience is what you get while looking for something else"

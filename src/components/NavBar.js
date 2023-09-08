@@ -41,7 +41,7 @@ export const NavBar = () => {
                     Home
                   </Nav.Link>
                   <Nav.Link href="#skills" className="navlink2">
-                    Skills
+                    Experience
                   </Nav.Link>
                   <Nav.Link href="#link" className="navlink3">
                     Projects

@@ -1,4 +1,4 @@
-/* ParallaxComponent.css */
+/* ParallaxComponentProjects.css */
 
 .parallax-container1 {
     height: 400px;
@@ -7,7 +7,8 @@
     justify-content: center;
     background-color: #000114;
     position: absolute;
-    top: 2000px;
+    top: 1950px; /* Updated position where it starts appearing */
+    left: 250px;
     transition: opacity 0.6s ease, transform 0.6s ease;
     overflow: hidden;
   }
@@ -27,14 +28,14 @@
     color: #FAF3FE;
     margin: 10px 0;
     position: absolute;
-    left: 1000px;
+    left: 400px; /* Updated fixed position from the left */
     top: 100px;
     transition: transform 0.6s ease, font-size 0.6s ease, opacity 0.6s ease;
   }
   
   .parallax-content1 p {
     position: absolute;
-    left: 600px;
+    left: 350px; /* Updated position of the paragraph */
     top: 190px;
     font-size: 16px;
     color: #666;

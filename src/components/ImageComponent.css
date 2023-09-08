@@ -1,0 +1,108 @@
+.image-container {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  cursor: pointer;
+  position: relative; /* Changed from absolute to relative */
+  background-color: #000114; /* Set the background color */
+  padding: 20px; /* Add padding for spacing */
+  top: 2350px;
+  left: 250px;
+  
+}
+
+.image {
+  width: 500px;
+  height: 350px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  object-fit: cover;
+}
+
+.image:hover {
+  transform: scale(1.1); /* Increase size on hover */
+  filter: brightness(1.09); /* Change brightness on hover */
+}
+
+.image-description {
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #E8FAFF; /* Change the text color to your preference */
+  transition: opacity 0.3s ease; /* Add opacity transition */
+  position: absolute;
+  top: -50px; /* Position from the top */
+  left: 0px; /* Position from the left */
+}
+
+.image-container2 {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  cursor: pointer;
+  position: relative; /* Changed from absolute to relative */
+  background-color: #000114; /* Set the background color */
+  padding: 20px; /* Add padding for spacing */
+  top: 2550px;
+  left: 850px;
+  
+}
+
+.image {
+  width: 500px;
+  height: 350px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  object-fit: cover;
+}
+
+.image:hover {
+  transform: scale(1.1); /* Increase size on hover */
+  filter: brightness(1.09); /* Change brightness on hover */
+}
+
+.image-description2 {
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #E8FAFF; /* Change the text color to your preference */
+  transition: opacity 0.3s ease; /* Add opacity transition */
+  position: absolute;
+  top: -50px; /* Position from the top */
+  left: 0px; /* Position from the left */
+}
+
+.image-container3 {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  cursor: pointer;
+  position: relative; /* Changed from absolute to relative */
+  background-color: #000114; /* Set the background color */
+  padding: 20px; /* Add padding for spacing */
+  top: 2750px;
+  left: 250px;
+  
+}
+
+.image {
+  width: 500px;
+  height: 350px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.image:hover {
+  transform: scale(1.1); /* Increase size on hover */
+  filter: brightness(1.09); /* Change brightness on hover */
+}
+
+.image-description3 {
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #E8FAFF; /* Change the text color to your preference */
+  transition: opacity 0.3s ease; /* Add opacity transition */
+  position: absolute;
+  top: -50px; /* Position from the top */
+  left: 0px; /* Position from the left */
+}
