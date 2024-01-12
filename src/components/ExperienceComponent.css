@@ -106,3 +106,19 @@
     left: 300px;
   }
 }
+
+@media screen and (max-width: 1400px) {
+  .experience-container1{
+    top: 1050px;
+    left:200px;
+  }
+  .experience-container2 {
+    top: 1350px;
+    left: 750px;
+  }
+  
+  .experience-container3 {
+    top: 1600px;
+    left: 200px;
+  }
+}

@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { motion } from "framer-motion";
-
 // Cube component
 const Cube = ({ size, color, position }) => {
   const cubeRef = useRef();
@@ -58,10 +57,10 @@ const BallsContainer = () => {
 
         {/* Render cubes */}
         {[
-          { size: 90, color: "#215E6F", position: [3.5, 0.8, 0.4] },
-          { size: 75, color: "#0A799F", position: [4.2, -0.2, 0.7] },
-          { size: 55, color: "#9BF0FA", position: [4.6, 0, 1.5] },
-          { size: 45, color: "#FFFFFF", position: [2.8, 0.5, 2.2] },
+          { size: 90, color: "#215E6F", position: [4.5, 0.8, 0.4] },
+          { size: 75, color: "#0A799F", position: [5.2, -0.2, 0.7] },
+          { size: 55, color: "#9BF0FA", position: [4.6, 0, 1.8] },
+          { size: 45, color: "#FFFFFF", position: [3.8, 0.5, 2.2] },
           { size: 55, color: "#FFFFBB", position: [4.2, 1.2, 1.3] },
         ].map((cube, index) => (
           <Cube
