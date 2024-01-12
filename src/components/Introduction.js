@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import './Introduction.css';
+import React, { useEffect, useState } from "react";
+import "./Introduction.css";
 
 const Introduction = () => {
   const roles = [
-    'Backend developer',
-    'Software Developer',
-    'Frontend developer',
-    'Full-Stack developer',
+    "Backend developer",
+    "Software Developer",
+    "Frontend developer",
+    "Full-Stack developer",
   ];
 
   const [roleIndex, setRoleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
 
   const typeRole = () => {
     const currentRole = roles[roleIndex];
@@ -43,7 +43,10 @@ const Introduction = () => {
         <p className="role-text">{text}</p>
       </div>
       <p className="experience-text">
-      A budding Full Stack and Java Developer with relevant experience who welcomes opportunities involving the enhancement of knowledge and skills. Passionate to explore challenging technological roles that promise overall professional and personal development
+        A budding Full Stack and Java Developer with relevant experience who
+        welcomes opportunities involving the enhancement of knowledge and
+        skills. Passionate to explore challenging technological roles that
+        promise overall professional and personal development
       </p>
     </div>
   );

@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
-import anime from 'animejs'; // Import anime.js
-import './Navbar.css';
+import React, { useEffect, useRef } from "react";
+import { Navbar, Container, Nav } from "react-bootstrap";
+import anime from "animejs";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll"; // Import Link and animateScroll
+import "./Navbar.css";
 
 export const NavBar = () => {
   const portfolioRef = useRef(null);
@@ -10,42 +11,62 @@ export const NavBar = () => {
     const animatePortfolio = () => {
       anime({
         targets: portfolioRef.current,
-        opacity: [0.1, 1],        // Animate opacity from 0 to 1
-        easing: 'easeInOutQuad',
-        duration: 1500,         // Animation duration in milliseconds
-        direction: 'alternate', // Alternate between fading in and out
-        loop: true,             // Loop the animation
+        opacity: [0.1, 1],
+        easing: "easeInOutQuad",
+        duration: 1500,
+        direction: "alternate",
+        loop: true,
       });
     };
 
-    animatePortfolio(); // Start the animation when the component mounts
+    animatePortfolio();
 
-    // Clean up the animation when the component unmounts
     return () => {
       anime.remove(portfolioRef.current);
     };
   }, []);
+
+  const scrollToSection = (sectionId) => {
+    scroll.scrollTo(sectionId, {
+      smooth: true,
+    });
+  };
 
   return (
     <div className="container">
       <Navbar expand="lg" className="bg-body-tertiary bg-black">
         <Container>
           <div className="container-flex-elements">
-            <Navbar.Brand href="#home" className="portfolio-title" ref={portfolioRef}>
+            <Navbar.Brand className="portfolio-title" ref={portfolioRef}>
               Portfolio
             </Navbar.Brand>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 <div className="nav-links-container">
-                  <Nav.Link href="#home" className="navlink1">
+                  <ScrollLink
+                    to="home"
+                    smooth={true}
+                    className="navlink1"
+                    onClick={() => scrollToSection("home")}
+                  >
                     Home
-                  </Nav.Link>
-                  <Nav.Link href="#skills" className="navlink2">
+                  </ScrollLink>
+                  <ScrollLink
+                    to={"experience"}
+                    smooth={true}
+                    className="navlink2"
+                    onClick={() => scrollToSection("experience")}
+                  >
                     Experience
-                  </Nav.Link>
-                  <Nav.Link href="#link" className="navlink3">
+                  </ScrollLink>
+                  <ScrollLink
+                    to="projects"
+                    smooth={true}
+                    className="navlink3"
+                    onClick={() => scrollToSection("projects")}
+                  >
                     Projects
-                  </Nav.Link>
+                  </ScrollLink>
                 </div>
               </Nav>
             </Navbar.Collapse>

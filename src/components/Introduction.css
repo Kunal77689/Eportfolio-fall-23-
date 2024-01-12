@@ -1,44 +1,60 @@
 /* Introduction.css */
 
 .introduction-container {
-    text-align: left;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
+  text-align: left;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.introduction-text {
+  font-size: 55px;
+  color: #ffffff;
+  position: absolute;
+  top: 150px;
+  color: #f8e9f7;
+  left: 20px;
+}
+
+.roles-container {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.role-text {
+  display: inline;
+  position: absolute;
+  top: 250px;
+  font-weight: 600;
+  font-family: monospace;
+  left: 20px;
+}
+
+.experience-text {
+  font-size: 22px;
+  color: #ffffff;
+  margin-top: 20px;
+  left: 20px;
+  position: absolute;
+  top: 450px;
+  width: 100%; /* Use 100% width to make it responsive */
+  max-width: 700px; /* Set a max-width to avoid excessive stretching on larger screens */
+  font-weight: 500;
+  color: #e0e0ea;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1800px) {
   .introduction-text {
-    font-size: 55px;
-    color: #ffffff;
-    position: absolute;
-    top: 150px;
-    color: #F8E9F7;
-    left:20px;
+    font-size: 45px;
   }
-  
-  .roles-container {
-    font-size: 20px;
-    color: #ffffff;
-  }
-  
+
   .role-text {
-    display: inline;
-    position: absolute;
-    top: 250px;
-    font-weight: 600;
-    font-family:monospace;
-    left:20px;
+    font-size: 20px;
   }
-  
+
   .experience-text {
-    font-size: 22px;
-    color: #ffffff;
-    margin-top: 20px;
-    left:20px;
-    position: absolute;
-    top: 450px;
-    width: 700px;
-    font-weight: 500;
-    color: #E0E0EA;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    top: 350px; /* Adjust positioning for smaller screens */
   }
-  
+}

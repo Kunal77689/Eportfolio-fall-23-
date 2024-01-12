@@ -8,7 +8,7 @@
     background-color: #000114;
     position: absolute;
     top: 1950px; /* Updated position where it starts appearing */
-    left: 250px;
+    left: 450px;
     transition: opacity 0.6s ease, transform 0.6s ease;
     overflow: hidden;
   }
@@ -41,4 +41,20 @@
     color: #666;
     margin: 10px 0;
   }
+
+  @media screen and (max-width: 1800px) {
+  
+    .parallax-heading1 {
+      font-size: 1.5em;
+    }
+
+    .parallax-container1{
+      left: 250px;
+    }
+  
+    .parallax-content1 p {
+      font-size: 1em;
+    }
+  }
+  
   

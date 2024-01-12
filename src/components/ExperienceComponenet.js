@@ -1,5 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './ExperienceComponent.css';
+import React, { useEffect, useRef, useState } from "react";
+import "./ExperienceComponent.css";
+import img1 from "../images/img2.jpg";
+import img2 from "../images/img1.webp";
+import img3 from "../images/img3.png";
+
+const images = [img1, img2, img3];
+
+const content = [
+  "Back End Developer at Carnegie Learning",
+  "Full Stack Developer at DIAG Lab",
+  "Software Developer at CHMR-FM",
+];
 
 const ExperienceComponent = () => {
   const containerRef1 = useRef(null);
@@ -13,19 +24,21 @@ const ExperienceComponent = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   const containerStyle = {
-    transform: `translateX(${isVisible1 || isVisible2 || isVisible3 ? '0' : '100%'})`,
+    transform: `translateX(${
+      isVisible1 || isVisible2 || isVisible3 ? "0" : "100%"
+    })`,
     opacity: isVisible1 || isVisible2 || isVisible3 ? 1 : 0,
-    transition: 'transform 0.6s ease, opacity 0.6s ease',
+    transition: "transform 0.6s ease, opacity 0.6s ease",
   };
 
   const imageStyle = {
     transform: `scale(${Math.min(1 + scrollProgress * 0.001, 2)})`,
-    transition: 'transform 0.6s ease',
+    transition: "transform 0.6s ease",
   };
 
   const paragraphStyle = {
     transform: `scale(${Math.min(1 + scrollProgress * 0.001, 2)})`,
-    transition: 'transform 0.6s ease',
+    transition: "transform 0.6s ease",
   };
 
   useEffect(() => {
@@ -33,126 +46,92 @@ const ExperienceComponent = () => {
       const scrollPosition = window.scrollY;
       setScrollProgress(scrollPosition);
 
-      // Adjust these trigger points
       const triggerPoint1 = 500;
       const triggerPoint2 = 1250;
-      const reductionSpeed = 0.0005; // Adjust the speed of reduction
+      const reductionSpeed = 0.0005;
 
       if (scrollPosition > triggerPoint2) {
-        // Gradually reduce size and opacity
         const progress = (scrollPosition - triggerPoint2) * reductionSpeed;
         setIsVisible1(progress <= 1);
         setIsVisible2(progress <= 1);
         setIsVisible3(progress <= 1);
 
         if (progress <= 1) {
-          containerRef1.current.style.transform = `scale(${1 - progress})`;
-          containerRef2.current.style.transform = `scale(${1 - progress})`;
-          containerRef3.current.style.transform = `scale(${1 - progress})`;
-          containerRef1.current.style.opacity = 1 - progress;
-          containerRef2.current.style.opacity = 1 - progress;
-          containerRef3.current.style.opacity = 1 - progress;
+          [containerRef1, containerRef2, containerRef3].forEach((ref) => {
+            ref.current.style.transform = `scale(${1 - progress})`;
+            ref.current.style.opacity = 1 - progress;
+          });
         }
       } else if (scrollPosition > triggerPoint1) {
-        setIsVisible1(true); // Start appearing and increasing in size when reaching the first trigger point
-        containerRef1.current.style.transform = 'scale(1)';
-        containerRef1.current.style.opacity = 1;
-
-        setIsVisible2(true); // Start appearing and increasing in size when reaching the first trigger point
-        containerRef2.current.style.transform = 'scale(1)';
-        containerRef2.current.style.opacity = 1;
-
-        setIsVisible3(true); // Start appearing and increasing in size when reaching the first trigger point
-        containerRef3.current.style.transform = 'scale(1)';
-        containerRef3.current.style.opacity = 1;
+        [setIsVisible1, setIsVisible2, setIsVisible3].forEach(
+          (setIsVisible, index) => {
+            setIsVisible(true);
+            [containerRef1, containerRef2, containerRef3][
+              index
+            ].current.style.transform = "scale(1)";
+            [containerRef1, containerRef2, containerRef3][
+              index
+            ].current.style.opacity = 1;
+          }
+        );
       } else {
-        setIsVisible1(false); // Disappear if scrolling above the first trigger point
-        setIsVisible2(false);
-        setIsVisible3(false);
+        [setIsVisible1, setIsVisible2, setIsVisible3].forEach((setIsVisible) =>
+          setIsVisible(false)
+        );
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check initial scroll position
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <div>
-      <div
-        className={`experience-container ${isVisible1 ? 'visible' : ''}`}
-        style={containerStyle}
-        ref={containerRef1}
-      >
-        <div className="experience-content">
-          <img
-            src="https://avatars.githubusercontent.com/u/5665626?s=200&v=4"
-            alt="Carnegie Learning"
-            className={`experience-image ${isVisible1 ? 'visible' : ''}`}
-            style={imageStyle}
-          />
-          <div
-            className={`experience-carnegie-container ${isVisible1 ? 'visible' : ''}`}
-          ></div>
-          <p
-            className={`experience-paragraph ${isVisible1 ? 'visible' : ''}`}
-            style={paragraphStyle}
-          >
-            Backend developer at Carnegie Learning
-          </p>
+    <div id="experience">
+      <div className="vertical-line"></div>
+      {[1, 2, 3].map((index) => (
+        <div
+          key={index}
+          className={`experience-container experience-container${index} ${
+            isVisible1 || isVisible2 || isVisible3 ? "visible" : ""
+          }`}
+          style={containerStyle}
+          ref={
+            index === 1
+              ? containerRef1
+              : index === 2
+              ? containerRef2
+              : containerRef3
+          }
+        >
+          <div className={`experience-content experience-content${index}`}>
+            <img
+              src={images[index - 1]}
+              alt={`Image ${index}`}
+              className={`experience-image experience-image${index} ${
+                isVisible1 || isVisible2 || isVisible3 ? "visible" : ""
+              }`}
+              style={imageStyle}
+            />
+            <div
+              className={`experience-carnegie-container experience-carnegie-container${index} ${
+                isVisible1 || isVisible2 || isVisible3 ? "visible" : ""
+              }`}
+            ></div>
+            <p
+              className={`experience-paragraph experience-paragraph${index} ${
+                isVisible1 || isVisible2 || isVisible3 ? "visible" : ""
+              }`}
+              style={paragraphStyle}
+            >
+              {content[index - 1]}
+            </p>
+          </div>
         </div>
-      </div>
-
-      <div
-        className={`experience-container2 ${isVisible2 ? 'visible' : ''}`}
-        style={containerStyle}
-        ref={containerRef2}
-      >
-        <div className="experience-content2">
-          <img
-            src="https://www.mun.ca/appinclude/stratum/favicon/favicon-192x192.png"
-            alt="DIAG Lab MUN"
-            className={`experience-image2 ${isVisible2 ? 'visible' : ''}`}
-            style={imageStyle}
-          />
-          <div
-            className={`experience-carnegie-container2 ${isVisible2 ? 'visible' : ''}`}
-          ></div>
-          <p
-            className={`experience-paragraph2 ${isVisible2 ? 'visible' : ''}`}
-            style={paragraphStyle}
-          >
-            Full-Stack Developer at DIAG Lab MUN
-          </p>
-        </div>
-      </div>
-
-      <div
-        className={`experience-container3 ${isVisible3 ? 'visible' : ''}`}
-        style={containerStyle}
-        ref={containerRef3}
-      >
-        <div className="experience-content3">
-          <img
-            src="https://static.mytuner.mobi/media/tvos_radios/SyZzeeqvXb.jpg"
-            alt="DIAG Lab MUN"
-            className={`experience-image3 ${isVisible3 ? 'visible' : ''}`}
-            style={imageStyle}
-          />
-          <div
-            className={`experience-carnegie-container3 ${isVisible3 ? 'visible' : ''}`}
-          ></div>
-          <p
-            className={`experience-paragraph3 ${isVisible3 ? 'visible' : ''}`}
-            style={paragraphStyle}
-          >
-            Software Developer at CHMR-FM MUN
-          </p>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

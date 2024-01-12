@@ -3,20 +3,20 @@
   align-items: center;
   width: 500px;
   cursor: pointer;
-  position: relative; /* Changed from absolute to relative */
-  background-color: #000114; /* Set the background color */
-  padding: 20px; /* Add padding for spacing */
-  top: 2350px;
-  left: 250px;
-  
+  position: relative;
+  background-color: #000114;
+  padding: 20px;
+  top: 350px;
+  left: 100px;
 }
 
 .image {
-  width: 500px;
-  height: 350px;
+  width: 100%; /* Use 100% width for responsiveness */
+  height: 100%; /* Use 100% height for responsiveness */
+  object-fit: contain; /* Ensure the whole image is visible */
   transition: transform 0.3s ease, filter 0.3s ease;
-  object-fit: cover;
 }
+
 
 .image:hover {
   transform: scale(1.1); /* Increase size on hover */
@@ -42,8 +42,8 @@
   position: relative; /* Changed from absolute to relative */
   background-color: #000114; /* Set the background color */
   padding: 20px; /* Add padding for spacing */
-  top: 2550px;
-  left: 850px;
+  top: 600px;
+  left: 1200px;
   
 }
 
@@ -78,8 +78,8 @@
   position: relative; /* Changed from absolute to relative */
   background-color: #000114; /* Set the background color */
   padding: 20px; /* Add padding for spacing */
-  top: 2750px;
-  left: 250px;
+  top: 850px;
+  left: 100px;
   
 }
 
@@ -105,4 +105,43 @@
   position: absolute;
   top: -50px; /* Position from the top */
   left: 0px; /* Position from the left */
+}
+
+@media screen and (max-width: 1800px) {
+  .image-container{
+    top: 650px;
+    left: 100px;
+  }
+
+  .image-description{
+    top: -50px;
+  }
+  .image-container2{
+    top: 900px;
+    left: 850px;
+  }
+
+  .image-container3{
+    top: 1150px;
+    left: 100px;
+  }
+
+  .image-description{
+    top: -50px; /* Position from the top */
+    left: 0px;
+  }
+
+  .image-description2{
+    top: -50px; /* Position from the top */
+    left: 0px;
+  }
+
+  .image-description3{
+    top: -50px; /* Position from the top */
+    left: 50px;
+  }
+  .image{
+    object-fit:contain;
+  }
+
 }

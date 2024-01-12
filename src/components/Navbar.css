@@ -1,24 +1,22 @@
-/* .container */
-.container {
-    position: absolute;
-    top: 0; /* Place the container at the top of the viewport */
-    width: 100%; /* Make the container span the full width */
-}
-html{
+/* Base styles for all screen sizes */
+html {
     background-color: #000114;
-    
-
 }
 
-/* .navbar */
+.container {
+    position: relative;
+    top:0vh;
+    width: 100%;
+}
+
 .navbar {
     display: flex;
-    justify-content: space-between; /* Space between brand and links */
+    justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 3.04vh;
+    background-color: #000114;
 }
 
-/* .navbar-brand */
 .navbar-brand {
     color: #fff;
     font-size: 2rem;
@@ -26,58 +24,47 @@ html{
     text-underline-offset: 0;
     position: absolute;
     left: 1.2rem;
-    top: 10px;
+    top: 0.38vw;
 }
 
-/* .nav-links-container */
 .nav-links-container {
-    position: absolute;
+    position: relative;
     right: 1.2rem;
     top: 10px;
     display: flex;
-    gap: 100px; /* Adjust the space between brand and links */
+    justify-content: end;
+    gap: 20px; 
 }
 
-/* .navbar-links */
-.navlink1 {
+.navlink1, .navlink2, .navlink3 {
     color: #fff;
     font-size: 1.5rem;
     text-decoration: none;
-    position: absolute;
-    right: 16.0rem;
-    top: 10px;
+    cursor: pointer;
 }
 
-.navlink2 {
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
-    position: absolute;
-    right: 7rem;
-    top: 10px;
-}
-
-.navlink3 {
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
-    position: absolute;
-    right: 0.0rem;
-    top: 10px;
-}
-
-.navlink1:hover{
+.navlink1:hover, .navlink2:hover, .navlink3:hover {
     font-weight: bold;
     text-decoration: none;
     color: #fffff0;
 }
-.navlink2:hover{
-    font-weight: bold;
-    text-decoration: none;
-    color: #fffff0;
-}
-.navlink3:hover{
-    font-weight: bold;
-    text-decoration: none;
-    color: #fffff0;
+
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media screen and (max-width: 1800px) {
+    .nav-links-container {
+        position: relative;
+        display: flex;
+        width: 100%;
+        text-align: center;
+    
+    }
+
+    .navlink1, .navlink2, .navlink3 {
+        display: flex;
+        margin-bottom: 10px; 
+    }
+
+    .container{
+        margin-top: 2vh;
+    }
 }

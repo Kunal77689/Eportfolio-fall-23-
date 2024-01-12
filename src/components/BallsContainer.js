@@ -1,6 +1,6 @@
-import React, { useRef, useEffect } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { motion } from 'framer-motion';
+import React, { useRef, useEffect } from "react";
+import { Canvas } from "@react-three/fiber";
+import { motion } from "framer-motion";
 
 // Cube component
 const Cube = ({ size, color, position }) => {
@@ -9,15 +9,15 @@ const Cube = ({ size, color, position }) => {
   useEffect(() => {
     const handleMouseMove = (e) => {
       const currMouseX = e.clientX;
-      const rotationAmount = (currMouseX - window.innerWidth / 2) * 0.00005; // Adjust this value for slower/faster animation
+      const rotationAmount = (currMouseX - window.innerWidth / 2) * 0.00008; // Adjust this value for slower/faster animation
       cubeRef.current.rotation.x += rotationAmount;
       cubeRef.current.rotation.y += rotationAmount;
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
@@ -38,9 +38,18 @@ const Cube = ({ size, color, position }) => {
 
 const BallsContainer = () => {
   return (
-    <div style={{ position: 'absolute', width: '900px', height: '900px', top: '100px', right: '20px' }}>
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "90vh",
+        top: "15vh",
+        right: "1.2rem",
+      }}
+      id="home"
+    >
       <Canvas
-        style={{ background: '#000114' }}
+        style={{ background: "#000114" }}
         camera={{ position: [0, 0, 5] }}
         gl={{ antialias: true }}
       >
@@ -49,10 +58,11 @@ const BallsContainer = () => {
 
         {/* Render cubes */}
         {[
-          { size: 100, color: '#215E6F', position: [1.2, 1.1, 0] },
-          { size: 80, color: '#0A799F', position: [1.6, -0.5, 0] },
-          { size: 60, color: '#9BF0FA', position: [2.0, 0, 1] },
-          { size: 40, color: '#FFFFFF', position: [1, 1, 2.5] },
+          { size: 90, color: "#215E6F", position: [3.5, 0.8, 0.4] },
+          { size: 75, color: "#0A799F", position: [4.2, -0.2, 0.7] },
+          { size: 55, color: "#9BF0FA", position: [4.6, 0, 1.5] },
+          { size: 45, color: "#FFFFFF", position: [2.8, 0.5, 2.2] },
+          { size: 55, color: "#FFFFBB", position: [4.2, 1.2, 1.3] },
         ].map((cube, index) => (
           <Cube
             key={index}
